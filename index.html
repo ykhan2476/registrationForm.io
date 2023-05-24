@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>login</title>
+        <style>
+          #d1{height: 450px;width: 500px;border: 5px solid grey;margin-top: 150px; background-image: url("images/s2.png");}
+          body{background-image: url("images/s1.png");}
+          form{padding: 30px;}
+        </style>
+        <script>
+           function validate_form(){
+            var a=document.getElementById("name").value;
+            var b=document.getElementById("email").value;
+            var c=document.getElementById("phone").value;
+            var d=document.getElementById("pwd1").value;
+            var e=document.getElementById("pwd2").value;
+            if(a==null || a==""){
+                window.alert("enter the name");
+            }
+            if(b==null || b==""){
+                window.alert("enter the email");
+            }
+            if(c==null || c==""){
+                window.alert("enter the phone");
+            }
+            if(d==null || d==""){
+                window.alert("enter the password");
+            }
+            if(e==null || e==""){
+                window.alert("please enter the password again");
+            }
+            if(d!=e){
+                window.alert("plase enter the same password");
+            }
+            else{
+                window.alert("registration successfull")
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <div >
+            <center>
+            <div id="d1">
+            <form>
+                <center><h1>REGISTRATION FORM</h1><br><br>
+                <label for="name">NAME</label><br>
+                <input type="text" id="name" required><br>
+
+                <label for="GMAIL">GMAIL</label><br>
+                <input type="email" id="email" required><br>
+
+                <label for="phone">PHONE NO.</label><br>
+                <input type="tel" id="phone" required><br>
+
+                <label for="pwd"> ENTER PASSWORD</label><br>
+                <input type="password" id="pwd1" required><br>
+                <label for="pwd"> CONFIRM PASSWORD</label><br>
+                <input type="password" id="pwd2" required><br><br>
+                <button TYPE="submit" onclick="validate_form()">Register</button>
+                </center>
+            </form>
+            </div></center>
+        </div>
+    </body>
+</html>
